@@ -2,12 +2,15 @@ import React from "react";
 
 const Card = ({jdLink,jdUid,  maxExp,minExp ,minJdSalary ,maxJdSalary , jobRole ,jobDetailsFromCompany ,location , salaryCurrencyCode}) => {
 
-  const salary = minJdSalary ? minJdSalary : "not disclosed";
+  // function capitalizeFirstLetter(word) {
+  //   if (!word) return ''; 
+  //   return word?.charAt(0)?.toUpperCase() + word.slice(1);
+  // }
 
   
   return (
     <div className="border shadow-md p-6 flex flex-col gap-4 rounded-2xl h-[580px]  w-[380px]">
-      <span className="border font-light self-start p-2 px-4 rounded-full shadow-xl">
+      <span className="border font-light self-start p-2 px-4 rounded-full shadow-lg">
         ⏳ Posted 12 days ago
       </span>
 
@@ -26,7 +29,7 @@ const Card = ({jdLink,jdUid,  maxExp,minExp ,minJdSalary ,maxJdSalary , jobRole 
       {/*  */}
       {minJdSalary ? (
   <p className="text-slate-600">
-    Estimated Salary: ₹{minJdSalary} - {maxJdSalary} LPA ✅
+    Estimated Salary: ₹{minJdSalary && parseInt(minJdSalary)?.toFixed(2)} - {maxJdSalary && parseInt( maxJdSalary)?.toFixed(2)} LPA ✅
   </p>
 ) : (
   <p className="text-slate-600 ">Not disclosed</p>

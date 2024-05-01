@@ -7,6 +7,14 @@
 
 }
 
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
 /* Desktop container utility class: */
 .container {
   max-width: 1536px;
